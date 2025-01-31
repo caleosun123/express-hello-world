@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Hello, world!" });
 });
 
-app.post("/submit", (req, res) -> {
+app.post("/submit", (req, res) => {
   const message = req.body.message;
   res.send(`You said: ${message}`);
 });
