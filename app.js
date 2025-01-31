@@ -19,7 +19,14 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   const message = req.body.message;
-  res.send(`You said: ${message}`);
+  res.send(`
+    <html>
+      <body>
+        <p>You said: ${message}</p>
+        <p>Click <a href="/">here</a> to go back.</p>
+      </body>
+    </html>
+  `);
 });
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
